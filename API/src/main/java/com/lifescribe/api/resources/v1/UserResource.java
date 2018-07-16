@@ -22,9 +22,8 @@ public class UserResource {
     @POST
     @Path("add")
     public int[] addUser(@QueryParam("firstName") String firstName,
-                          @QueryParam("lastName") String lastName,
-                          @QueryParam("email") String email) {
-        //System.out.print(String.format("firstName: %s, lastName %s, email: %s", firstName, lastName, email));
+                         @QueryParam("lastName") String lastName,
+                         @QueryParam("email") String email) {
         return userDao.insert(firstName, lastName, email);
     }
 }
